@@ -1,14 +1,15 @@
 # DEPLOYING ELASTIC STACK ON AWS EC2 INSTANCE FOR OBSERVABILITY AND MONITORING
 
-To start with , i would like to explain what **Observability in DevOps means**. Observability refers to the methodology and practice of obtaining real world insights into the behaviour, perfomance,  and health of complex software systems, and infrastucture components. It involves collecting, analyzing, and visualizing various data points, metrics, logs, traces, and events to understand how a system is functioning, identify issues, and make informed decisions to improve its performance and reliability.
+To start with , i would like to explain what **Observability in DevOps means**. Observability refers to the methodology and practice of obtaining real world insights into the behaviour, performance,  and health of complex software systems, and infrastructure components. It involves collecting, analyzing, and visualizing various data points, metrics, logs, traces, and events to understand how a system is functioning, identify issues, and make informed decisions to improve its performance and reliability.
 
 The ELK Stack or Elastic Stack is a collection of; Elasticsearch, Logstash, Kibana and Beats.
 The ELK Stack helps by providing users with a powerful platform that collects and processes data from multiple data sources, stores that data in one centralized data store that can scale as data grows, and that provides a set of tools to analyze the data.
+Let's take a comprehensive look at the different components comprising the stack and understand what role they play in data pipelines, how to install and configure them;
 
-- Elasticsearch; is a JSON  NoSQL database used to store inputs or logs. It listens on port:9200 by default
-- Logstash; is a data processing pipeline that ingests, processes, and transforms data from multiple sources before sending it to various destinations. Logstash can process various types of data, including logs, metrics, and events. It can also perform parsing, filtering, and formatting of data before forwarding it to Elasticsearch. It listens on port:5044 by default
-- Kibana; is a data visualization and exploration tool. It provides a frindly web based User Interface, used by Elasticsearch to interact with data. It listens on port:5601 by default
-- Beats; are lightweight data shippers designed to collect, ship, and send various types of data to Elasticsearch or Logstash.
+- **Elasticsearch**; is a JSON  NoSQL database used to store inputs or logs. It listens on port:9200 by default
+- **Logstash**; is a data processing pipeline that ingests, processes, and transforms data from multiple sources before sending it to various destinations. Logstash can process various types of data, including logs, metrics, and events. It can also perform parsing, filtering, and formatting of data before forwarding it to Elasticsearch. It listens on port:5044 by default
+- **Kibana**; is a data visualization and exploration tool that works on top of Elasticsearch. It provides a frindly web based User Interface, used by Elasticsearch to interact with data. It listens on port:5601 by default
+- **Beats**; are lightweight data shippers designed to collect, ship, and send various types of data to Elasticsearch or Logstash.
 
 This components are designed in a way to interact and play nicely with each other without too much extra configuration.
 
